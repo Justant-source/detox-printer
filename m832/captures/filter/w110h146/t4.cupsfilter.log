@@ -1,0 +1,76 @@
+DEBUG: argv[0]="cupsfilter"
+DEBUG: argv[1]="1"
+DEBUG: argv[2]="justant"
+DEBUG: argv[3]="t4_line.png"
+DEBUG: argv[4]="1"
+DEBUG: argv[5]="PageSize=w110h146"
+DEBUG: argv[6]="captures/filter/t4_line.png"
+DEBUG: envp[0]="CONTENT_TYPE=image/png"
+DEBUG: envp[1]="CUPS_DATADIR=/usr/share/cups"
+DEBUG: envp[2]=""
+DEBUG: envp[3]="CUPS_SERVERBIN=/usr/lib/cups"
+DEBUG: envp[4]="CUPS_SERVERROOT=/etc/cups"
+DEBUG: envp[5]="LANG=C.UTF8"
+DEBUG: envp[6]="PATH=/usr/lib/cups/filter:/usr/bin:/usr/sbin:/bin:/usr/bin"
+DEBUG: envp[7]="PPD=.temp/driver/extracted/QY_Printer-2.1.0.3/ppds/M832.ppd"
+DEBUG: envp[8]="PRINTER_INFO=cupsfilter"
+DEBUG: envp[9]="PRINTER_LOCATION=Unknown"
+DEBUG: envp[10]="PRINTER=cupsfilter"
+DEBUG: envp[11]="USER=justant"
+DEBUG: envp[12]="CHARSET=utf-8"
+DEBUG: envp[13]="FINAL_CONTENT_TYPE=application/vnd.cups-raster"
+INFO: universal (PID 79966) started.
+DEBUG: ppdFilterLoadPPD: Color profile qualifier determined from job and PPD data '..300dpi'
+DEBUG: ppdFilterLoadPPD: No ICC profiles specified in PPD
+DEBUG: ppdFilterLoadPPD: Searching for profile "300dpi/-"...
+DEBUG: ppdFilterLoadPPD: Last filter determined by the PPD: rastertoM08F; Final data MIME type: application/vnd.cups-raster => PDF filter will not log pages in page_log.
+DEBUG: ppdFilterUniversal: "*cupsFilter(2): ..." lines in the PPD file:
+DEBUG: ppdFilterUniversal:    application/vnd.cups-raw application/octet-stream 0 -
+DEBUG: ppdFilterUniversal:    application/vnd.cups-raster 0 rastertoM08F
+DEBUG: ppdFilterUniversal: PPD uses "*cupsFilter: ..." lines, so we always convert to format given by FINAL_CONTENT_TYPE
+DEBUG: ppdFilterUniversal: Converting from image/png to application/vnd.cups-raster
+DEBUG: cfFilterUniversal: Converting from image/png to application/vnd.cups-raster
+DEBUG: cfFilterUniversal: Final output format for job: application/vnd.cups-raster
+DEBUG: cfFilterUniversal: Adding imagetoraster to chain
+INFO: cfFilterChain: Running filter: imagetoraster
+INFO: DEBUG: cfFilterImageToRaster: Final output format: CUPS Raster
+cfFilterChain: imagetoraster (PID 79967) started.
+DEBUG: Color space requested: Default
+DEBUG: Final output format: CUPS Raster
+DEBUG: cfFilterImageToRaster: doc.color = 1
+DEBUG: cfFilterImageToRaster: doc.Orientation = 0
+DEBUG: cfFilterImageToRaster: doc.Duplex = 0
+DEBUG: cfFilterImageToRaster: doc.PageWidth = 312.0
+DEBUG: cfFilterImageToRaster: doc.PageLength = 414.0
+DEBUG: cfFilterImageToRaster: doc.PageLeft = 0.0
+DEBUG: cfFilterImageToRaster: doc.PageRight = 312.0
+DEBUG: cfFilterImageToRaster: doc.PageTop = 414.0
+DEBUG: cfFilterImageToRaster: doc.PageBottom = 0.0
+DEBUG: cfFilterImageToRaster: Print rendering intent = auto
+DEBUG: Color Manager: Calibration Mode/Off
+DEBUG: Calling FindDeviceById(cups-cupsfilter)
+DEBUG: Failed to send: org.freedesktop.DBus.Error.ServiceUnknown:The name org.freedesktop.ColorManager was not provided by any .service files
+DEBUG: Failed to get find device cups-cupsfilter
+INFO: cfFilterImageToRaster: Loading print file.
+DEBUG: cfFilterImageToRaster: Before scaling: xppi=0, yppi=0, zoom=1.00
+DEBUG: cfFilterImageToRaster: Before scaling: xprint=4.3, yprint=5.8
+DEBUG: cfFilterImageToRaster: img->xppi = 299, img->yppi = 299, aspect = 1.000000
+DEBUG: cfFilterImageToRaster: Portrait size is 4.33 x 5.75 inches
+DEBUG: cfFilterImageToRaster: Landscape size is 3.27 x 4.33 inches
+DEBUG: cfFilterImageToRaster: Using portrait orientation...
+DEBUG: cfFilterImageToRaster: xpages = 1x4.33in, ypages = 1x5.75in
+DEBUG: cfFilterImageToRaster: PageSize = [312 414]
+DEBUG: cfFilterImageToRaster: PageLeft = 0.000000, PageRight = 312.009460, PageBottom = 0.000000, PageTop = 414.000000
+DEBUG: cfFilterImageToRaster: Orientation: 0, XPosition: 0, YPosition: 0, ImagingBoundingBox = [0 0 312 413]
+DEBUG: cfFilterImageToRaster: cupsWidth = 1300
+DEBUG: cfFilterImageToRaster: cupsHeight = 1724
+DEBUG: cfFilterImageToRaster: cupsBitsPerColor = 8
+DEBUG: cfFilterImageToRaster: cupsBitsPerPixel = 24
+DEBUG: cfFilterImageToRaster: cupsBytesPerLine = 3900
+DEBUG: cfFilterImageToRaster: cupsColorOrder = 0
+DEBUG: cfFilterImageToRaster: cupsColorSpace = 1
+DEBUG: cfFilterImageToRaster: img->colorspace = 3
+INFO: cfFilterImageToRaster: Formatting page 1.
+DEBUG: cfFilterChain: imagetoraster completed with status 0.
+INFO: cfFilterChain: imagetoraster (PID 79967) exited with no errors.
+INFO: universal (PID 79966) exited with no errors.

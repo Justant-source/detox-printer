@@ -1,0 +1,166 @@
+mytest：entry main
+mytest:TotalPage: 1
+mytest：language is C
+PAGE: 1 1
+DEBUG: StartPage...
+DEBUG: MediaClass = ""
+DEBUG: MediaColor = ""
+DEBUG: MediaType = ""
+DEBUG: OutputType = ""
+DEBUG: AdvanceDistance = 0
+DEBUG: AdvanceMedia = 0
+DEBUG: Collate = 0
+DEBUG: CutMedia = 0
+DEBUG: Duplex = 0
+DEBUG: HWResolution = [ 300 300 ]
+DEBUG: ImagingBoundingBox = [ 0 0 312 413 ]
+DEBUG: cupsImagingBBox = [ 0.000000 0.042114 312.009460 413.957886 ]
+DEBUG: InsertSheet = 0
+DEBUG: Jog = 0
+DEBUG: LeadingEdge = 0
+DEBUG: Margins = [ 0 0 ]
+DEBUG: ManualFeed = 0
+DEBUG: MediaPosition = 0
+DEBUG: MediaWeight = 0
+DEBUG: MirrorPrint = 0
+DEBUG: NegativePrint = 0
+DEBUG: NumCopies = 1
+DEBUG: Orientation = 0
+DEBUG: OutputFaceUp = 0
+DEBUG: PageSize = [ 312 414 ]
+DEBUG: cupsPageSize = [ 312.009460 414.000000 ]
+DEBUG: Separations = 0
+DEBUG: TraySwitch = 0
+DEBUG: Tumble = 0
+DEBUG: cupsWidth = 1300
+DEBUG: cupsHeight = 1724
+DEBUG: cupsMediaType = 0
+DEBUG: cupsBitsPerColor = 8
+DEBUG: cupsBitsPerPixel = 24
+DEBUG: cupsBytesPerLine = 3900
+DEBUG: cupsColorOrder = 0
+DEBUG: cupsColorSpace = 1
+DEBUG: cupsCompression = 0
+DEBUG: cupsRowCount = 8
+DEBUG: cupsRowFeed = 0
+DEBUG: cupsRowStep = 0
+DEBUG: ModelNumber = 77832
+DEBUG: cupsPageSizeName = 110.07x146.05mm.Borderless
+INFO: 1/1
+nw is 1304 1 and cupsBytesPerLine is 3900
+gray and graylevel is 7(16)
+process gray end and width is 1304 and height is 1724 and rotate is 0
+
+process rotate end
+width: 1304, height: 1724
+ATTR: job-media-progress=0
+ATTR: job-media-progress=0
+ATTR: job-media-progress=1
+ATTR: job-media-progress=2
+ATTR: job-media-progress=3
+ATTR: job-media-progress=4
+ATTR: job-media-progress=5
+ATTR: job-media-progress=6
+ATTR: job-media-progress=7
+ATTR: job-media-progress=8
+ATTR: job-media-progress=9
+ATTR: job-media-progress=10
+ATTR: job-media-progress=11
+ATTR: job-media-progress=12
+ATTR: job-media-progress=12
+ATTR: job-media-progress=13
+ATTR: job-media-progress=14
+ATTR: job-media-progress=15
+ATTR: job-media-progress=16
+ATTR: job-media-progress=17
+ATTR: job-media-progress=18
+ATTR: job-media-progress=19
+ATTR: job-media-progress=20
+ATTR: job-media-progress=21
+ATTR: job-media-progress=22
+ATTR: job-media-progress=23
+ATTR: job-media-progress=24
+ATTR: job-media-progress=25
+ATTR: job-media-progress=25
+ATTR: job-media-progress=26
+ATTR: job-media-progress=27
+ATTR: job-media-progress=28
+ATTR: job-media-progress=29
+ATTR: job-media-progress=30
+ATTR: job-media-progress=31
+ATTR: job-media-progress=32
+ATTR: job-media-progress=33
+ATTR: job-media-progress=34
+ATTR: job-media-progress=35
+ATTR: job-media-progress=36
+ATTR: job-media-progress=37
+ATTR: job-media-progress=38
+ATTR: job-media-progress=38
+ATTR: job-media-progress=39
+ATTR: job-media-progress=40
+ATTR: job-media-progress=41
+ATTR: job-media-progress=42
+ATTR: job-media-progress=43
+ATTR: job-media-progress=44
+ATTR: job-media-progress=45
+ATTR: job-media-progress=46
+ATTR: job-media-progress=47
+ATTR: job-media-progress=48
+ATTR: job-media-progress=49
+ATTR: job-media-progress=50
+ATTR: job-media-progress=51
+ATTR: job-media-progress=51
+ATTR: job-media-progress=52
+ATTR: job-media-progress=53
+ATTR: job-media-progress=54
+ATTR: job-media-progress=55
+ATTR: job-media-progress=56
+ATTR: job-media-progress=57
+ATTR: job-media-progress=58
+ATTR: job-media-progress=59
+ATTR: job-media-progress=60
+ATTR: job-media-progress=61
+ATTR: job-media-progress=62
+ATTR: job-media-progress=63
+ATTR: job-media-progress=64
+ATTR: job-media-progress=64
+ATTR: job-media-progress=65
+ATTR: job-media-progress=66
+ATTR: job-media-progress=67
+ATTR: job-media-progress=68
+ATTR: job-media-progress=69
+ATTR: job-media-progress=70
+ATTR: job-media-progress=71
+ATTR: job-media-progress=72
+ATTR: job-media-progress=73
+ATTR: job-media-progress=74
+ATTR: job-media-progress=75
+ATTR: job-media-progress=76
+ATTR: job-media-progress=77
+ATTR: job-media-progress=77
+ATTR: job-media-progress=78
+ATTR: job-media-progress=79
+ATTR: job-media-progress=80
+ATTR: job-media-progress=81
+ATTR: job-media-progress=82
+ATTR: job-media-progress=83
+ATTR: job-media-progress=84
+ATTR: job-media-progress=85
+ATTR: job-media-progress=86
+ATTR: job-media-progress=87
+ATTR: job-media-progress=88
+ATTR: job-media-progress=89
+ATTR: job-media-progress=90
+ATTR: job-media-progress=90
+ATTR: job-media-progress=91
+ATTR: job-media-progress=92
+ATTR: job-media-progress=93
+ATTR: job-media-progress=94
+ATTR: job-media-progress=95
+ATTR: job-media-progress=96
+ATTR: job-media-progress=97
+ATTR: job-media-progress=98
+ATTR: job-media-progress=99
+buffer size is 281012
+INFO: Printed data has been sent
+INFO:

@@ -8,3 +8,7 @@ m832/__pycache__/
 m832/logs/
 m832/captures/official/*.pcap
 m832/captures/official/*.pcapng
+m832/.temp/driver/
+m832/captures/filter/*.ras
+m832/captures/filter/**/*.ras
+m832/captures/filter/**/*.ras2
