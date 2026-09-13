@@ -169,3 +169,11 @@
 - 결론: [확인됨·실물] `--h-offset-mm`이 의도대로 동작함(양수=오른쪽 이동, 벤더 소스의 `nj = j + hOffset`과 동일 방향). +2mm에서 좌우 대칭 각 ~1mm로 실용적으로 양호. 완전히 0으로 만들려면 폭 자체를 ~24dot(163→약 160byte) 줄이는 시도가 필요하나, 이 프로젝트(개인용 라벨/사진 인쇄 PoC)에는 대칭 1mm 여백으로 충분하다고 판단 — **`--h-offset-mm` 기본값을 2.0으로 확정**(사용자 결정). 이제 옵션 없이 실행해도 자동 적용됨. 0으로 override 가능(다른 매체·다른 개체 프린터 재보정용)
 
 ---
+
+## [2026-09-13] 업스트림 기여 (phomemo-tools PR #51)
+
+- 보낸 것: 프린터에는 아무것도 안 보냄(오프라인 검증만). `vivier/phomemo-tools`에 `cups: add M832 driver` PR(https://github.com/vivier/phomemo-tools/pull/51, 브랜치 `feature/add-M832`; 같은 커밋의 #50은 이름 변경으로 대체·종료) — 새 `.drv` + `rastertopm832.py` + 등록 3곳 + README, 커밋 `a3257ad`, 작업 클론 `~/Data/phomemo-tools-m832`
+- 관찰: 새 필터 출력이 실물 검증된 `captures/filter/w110h146/t3n.bin2`와 겹치는 비트맵 16,300바이트 중 차이 0, A4는 3508줄 패딩+3바이트 꼬리 확인. 검증 중 `cupsPageSizeName`에 null 뒤 잔여 바이트(`'A4\x00ter'`)가 섞여 오는 CUPS 쪽 문제를 발견해 필터에서 첫 null 앞만 쓰도록 처리
+- 결론: [확인됨·오프라인] 110mm 롤 경로는 벤더 출력과 비트맵 동일. A4/Letter/80mm/53mm는 [미검증·실물]로 PR에 명시. 상세는 `.temp/UPSTREAM-01.md`
+
+---
