@@ -4,3 +4,7 @@ m832/.venv/
 m832/__pycache__/
 *.pyc
 .DS_Store
+.venv/
+m832/logs/
+m832/captures/official/*.pcap
+m832/captures/official/*.pcapng
