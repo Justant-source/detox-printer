@@ -198,3 +198,15 @@
   SPP가 RFCOMM 기반 단순 시리얼 파이프라 USB bulk-out과 의미상 더 가까울 가능성이 높음. 다음은 SPP의
   RFCOMM 채널 번호를 조회하고, 페어링된 상태로 HCRP L2CAP(PSM 4107) 재시도 — 앞서 미페어링 상태에서는
   L2CAP connect가 `EPERM`(Permission denied)으로 거부됐음(root로 실행해도 동일 — 링크 레벨 인증 문제로 추정)
+
+---
+
+## [2026-09-17] V2 — SPP(RFCOMM) 채널 확인: 채널 1, 서비스명 JL_SPP
+
+- 보낸 것: 없음 (`sdptool search SP` — SDP 조회만)
+- 관찰: `sdptool browse`(전체 브라우즈)에는 안 잡히던 SPP 레코드가 `sdptool search SP`(타깃 조회)로는
+  잡힘. `Service Name: JL_SPP`, `Service Class: "Serial Port"(0x1101)`, `Protocol: RFCOMM Channel 1`.
+  "JL"은 JieLi 계열 BT 칩셋에서 흔한 접두어로, 단순 시리얼 패스스루로 추정됨
+- 결론: [확인됨·실물] SPP/RFCOMM 채널=1. HCRP(L2CAP PSM 4107, 페어링 안 된 상태에서 EPERM)보다
+  프로토콜이 단순하고 USB bulk-out과 의미상 더 가까워 보임 — 다음 실험은 RFCOMM 채널 1로
+  검증된 체커보드 바이트(0002.bin) 전송
