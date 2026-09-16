@@ -185,3 +185,16 @@
 - 보낸 것: 없음 (`bluetoothctl scan on`, `sdptool browse C5:0D:F7:B7:B2:A1` — 조회만, 프린터로 바이트 전송 없음)
 - 관찰: MAC `C5:0D:F7:B7:B2:A1`, 이름 `M832`, Class 0x00140680(Icon: printer)로 스캔에 잡힘 — `.temp/01-orangepi-poc-작업지시서-v1.2.md` 기기 대장의 1호기(Q253E6831170035)와 MAC 일치. SDP 조회 결과 서비스 레코드 1개: `Service Class ID List: "HCR Print" (0x1126)`, `Protocol: L2CAP PSM 4107`, `Profile: Hardcopy Cable Replacement (0x1125) v0x0100`. **Classic SPP(RFCOMM)이 아니라 HCRP(L2CAP 직결)를 광고한다.**
 - 결론: [확인됨·실물] init_plan.md의 "같은 계열(M04S/M834)은 SPP/BLE [추정]"은 M832에는 맞지 않는다 — M832는 HCRP다. 다음 단계는 L2CAP PSM 4107로 소켓을 열어 이미 검증된 `captures/sent/0002.bin`(체커보드, USB로 인쇄 확인됨)을 그대로 써보는 것 — HCRP가 세션 핸드셰이크 없이 원시 데이터를 그대로 받는지, 아니면 별도 프로토콜 레이어가 있는지는 아직 [미검증]
+
+---
+
+## [2026-09-17] V2 — 페어링 성공, SPP UUID도 노출됨
+
+- 보낸 것: `bluetoothctl pair C5:0D:F7:B7:B2:A1` — 페어링 요청뿐, PIN 없이 성공(Just Works로 추정)
+- 관찰: 페어링 성공 후 `Bonded: yes`, `Paired: yes`. 이전(미인증) `sdptool browse`에서는 안 보이던
+  `UUIDs: 00001101-...`(SPP, Serial Port Profile)가 `00001126-...`(HCR Print)와 함께 나타남.
+  즉 M832는 HCRP뿐 아니라 **SPP도 지원**하며, 미인증 SDP 조회는 서비스 목록을 일부만 보여준 것으로 보임
+- 결론: [확인됨·실물] init_plan.md의 "같은 계열은 SPP [추정]"이 완전히 틀린 건 아니었다 — HCRP·SPP 둘 다 있다.
+  SPP가 RFCOMM 기반 단순 시리얼 파이프라 USB bulk-out과 의미상 더 가까울 가능성이 높음. 다음은 SPP의
+  RFCOMM 채널 번호를 조회하고, 페어링된 상태로 HCRP L2CAP(PSM 4107) 재시도 — 앞서 미페어링 상태에서는
+  L2CAP connect가 `EPERM`(Permission denied)으로 거부됐음(root로 실행해도 동일 — 링크 레벨 인증 문제로 추정)
