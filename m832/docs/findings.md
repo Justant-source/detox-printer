@@ -177,3 +177,11 @@
 - 결론: [확인됨·오프라인] 110mm 롤 경로는 벤더 출력과 비트맵 동일. A4/Letter/80mm/53mm는 [미검증·실물]로 PR에 명시. 상세는 `.temp/UPSTREAM-01.md`
 
 ---
+
+---
+
+## [2026-09-17 07:22] V2 — BT 서비스 탐색 (서버 세션, 페어링 없이 SDP만)
+
+- 보낸 것: 없음 (`bluetoothctl scan on`, `sdptool browse C5:0D:F7:B7:B2:A1` — 조회만, 프린터로 바이트 전송 없음)
+- 관찰: MAC `C5:0D:F7:B7:B2:A1`, 이름 `M832`, Class 0x00140680(Icon: printer)로 스캔에 잡힘 — `.temp/01-orangepi-poc-작업지시서-v1.2.md` 기기 대장의 1호기(Q253E6831170035)와 MAC 일치. SDP 조회 결과 서비스 레코드 1개: `Service Class ID List: "HCR Print" (0x1126)`, `Protocol: L2CAP PSM 4107`, `Profile: Hardcopy Cable Replacement (0x1125) v0x0100`. **Classic SPP(RFCOMM)이 아니라 HCRP(L2CAP 직결)를 광고한다.**
+- 결론: [확인됨·실물] init_plan.md의 "같은 계열(M04S/M834)은 SPP/BLE [추정]"은 M832에는 맞지 않는다 — M832는 HCRP다. 다음 단계는 L2CAP PSM 4107로 소켓을 열어 이미 검증된 `captures/sent/0002.bin`(체커보드, USB로 인쇄 확인됨)을 그대로 써보는 것 — HCRP가 세션 핸드셰이크 없이 원시 데이터를 그대로 받는지, 아니면 별도 프로토콜 레이어가 있는지는 아직 [미검증]
